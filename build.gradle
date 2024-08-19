@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-version = project.sdk_version
+version = 1.0
 group = project.maven_group
 
 def targetJavaVersion = 8
@@ -44,7 +44,7 @@ publishing {
     publications {
         shadow(MavenPublication) { publication ->
             from components.java
-            version = "${project.sdk_version}"
+            version = 1.0
             artifactId = "${project.archives_base_name}"
             groupId = "${project.maven_group}"
             pom {
